@@ -1,19 +1,16 @@
-import React from 'react';
-import Head from 'next/head'
+import React from 'react'
+import Header from '../components/Header/Header'
+import GlobalStyle from '../styles/global'
+import { ThemeProvider } from 'styled-components'
+import colors from '../styles/themes/colors'
 
-const Home: React.FC = () => {
+export default function Home () {
   return (
-    <div>
-      <Head>
-        <title>Home Page</title>
-      </Head>
+    <ThemeProvider theme={colors}>
       <main>
-        <h1>
-          Hello world
-        </h1>
+        <GlobalStyle />
+        <Header />
       </main>
-    </div>
+    </ThemeProvider>
   )
 }
-
-export default Home
