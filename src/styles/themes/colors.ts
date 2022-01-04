@@ -1,10 +1,10 @@
 export default {
   colors: {
-    primary: '#D90368',
+    primary: '#B6116E',
     secondary: '#820263',
     tertiary: '#291720',
-    quaternary: '#F75C03',
-    quinary: '#04A777',
+    quaternary: '#F79552',
+    buttonColor: '#7EBC43',
 
     textPrimary: '#000000',
     textSecondary: '#888888',

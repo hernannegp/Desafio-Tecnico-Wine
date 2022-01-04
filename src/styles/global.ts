@@ -10,7 +10,7 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.colors.backgroundPrimary};
     font-size: 14px;
-    color: #333;
-    font-family: 'montserrat', sans-serif;
+    color: ${props => props.theme.colors.textPrimary};
+    font-family: 'Lato', sans-serif;
   }
 `

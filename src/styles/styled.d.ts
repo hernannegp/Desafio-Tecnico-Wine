@@ -6,7 +6,7 @@ declare module 'styled-components' {
       secondary: string,
       tertiary: string,
       quaternary: string,
-      quinary: string,
+      buttonColor: string,
 
       textPrimary: string,
       textSecondary: string,
