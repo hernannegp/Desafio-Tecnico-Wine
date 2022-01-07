@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import Products from '../components/Products/Products'
-import { ThemeProvider } from 'styled-components'
-import colors from '../styles/themes/colors'
+import ButtonCatalog from '../components/utilities/ButtonCatalog'
 
 export default function Home () {
   return (
-    <ThemeProvider theme={colors}>
       <main>
         <Header />
         <Products />
+        <ButtonCatalog />
       </main>
-    </ThemeProvider>
   )
 }
