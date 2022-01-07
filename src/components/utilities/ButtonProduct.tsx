@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { selectProduct } from '../Redux/slices/productSlice'
 import { useSelector } from 'react-redux'
 import { iList } from '../interfaces'
@@ -8,15 +8,12 @@ interface props {
 }
 
 const ButtonProduct: React.FC<props> = (props) => {
-  const [price, setPrice] = useState<number>(0)
-
   const { products } = useSelector(selectProduct)
   const addToCart = (id: number) => {
     const product = products.find((item: iList) => item.id === id)
-    if (product) {
-      setPrice(price + product.priceNonMember)
-    }
-    console.log(product)
+    const storageItems = JSON.parse(localStorage.getItem('cartItems') || '[]')
+    const newProducts = [...storageItems, product]
+    localStorage.setItem('cartItems', JSON.stringify(newProducts))
   }
 
   return (
