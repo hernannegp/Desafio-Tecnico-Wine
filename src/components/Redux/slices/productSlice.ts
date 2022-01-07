@@ -22,8 +22,6 @@ export const slice = createSlice({
   }
 })
 
-export const selectProducts = (state: RootState) => state.product
-
 export const { setProducts, setFinalSlice, setIntialSlice } = slice.actions
 
 export const selectProduct = (state: RootState) => state.product
