@@ -10,6 +10,7 @@ export interface iList {
   price: number,
   priceMember: number,
   priceNonMember: number,
+  volume: string,
   rating: number,
   region: string,
   size: string,
