@@ -6,7 +6,6 @@ import ButtonCatalogStyle from '../../styles/components/ButtonCatalog'
 const ButtonCatalog: React.FC = () => {
   const dispatch = useDispatch()
   const handleClick = (e) => {
-    console.log(e.target.value)
     if (e.target.value === '1') {
       dispatch(setIntialSlice(0))
       dispatch(setFinalSlice(9))
