@@ -1,7 +1,9 @@
 import React from 'react'
 import HeaderStyle from '../../styles/components/Header'
+import { useRouter } from 'next/router'
 
 const Header: React.FC = () => {
+  const router = useRouter()
   return (
     <div>
       <HeaderStyle>
@@ -12,8 +14,8 @@ const Header: React.FC = () => {
         <p>Ofertas</p>
         <p>Eventos</p>
         <img data-testid="searchIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXHJuJKjrqJMzTERi6KnRPjJ7w4TXueby2g&usqp=CAU" width="20px"/>
-        <img data-testid="profileIcon" src="https://www.pngkey.com/png/detail/72-729670_png-file-svg-single-user-icon-png.png" width="20px"/>
-        <img data-testid="cartIcon" src="https://www.pngrepo.com/png/60848/512/shopping-cart-empty-side-view.png" width="20px"/>
+        <img onClick={() => router.push('/')} data-testid="profileIcon" src="https://www.pngkey.com/png/detail/72-729670_png-file-svg-single-user-icon-png.png" width="20px"/>
+        <img onClick={() => router.push('/ShoppingCart')} data-testid="cartIcon" src="https://www.pngrepo.com/png/60848/512/shopping-cart-empty-side-view.png" width="20px"/>
       </HeaderStyle>
     </div>
   )
