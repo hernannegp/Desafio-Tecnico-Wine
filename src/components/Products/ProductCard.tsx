@@ -20,7 +20,7 @@ const ProductCard: React.FC = () => {
     <div>
       <UlStyle>
         { products.length === 0
-          ? <p>Nenhum produto encontrado</p>
+          ? <h1>Nenhum produto encontrado</h1>
           : products.map((product: iList) => (
             <div key={product.id} className="productCard">
               <div className="imagesContainer">
