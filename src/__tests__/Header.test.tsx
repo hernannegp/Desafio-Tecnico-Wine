@@ -6,6 +6,7 @@ describe('Testa o Header', () => {
   it('Testa os elementos visiveis na tela', () => {
     const { getByText, getByTestId } = render(<Header/>)
 
+    const wineIcon = getByTestId('wineIcon')
     const name = getByText('Clube')
     const store = getByText('Loja')
     const producers = getByText('Produtores')
@@ -14,7 +15,6 @@ describe('Testa o Header', () => {
     const searchIcon = getByTestId('searchIcon')
     const profileIcon = getByTestId('profileIcon')
     const cartIcon = getByTestId('cartIcon')
-    const wineIcon = getByTestId('wineIcon')
 
     expect(name).toBeVisible()
     expect(store).toBeVisible()

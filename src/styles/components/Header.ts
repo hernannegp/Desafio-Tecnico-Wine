@@ -6,11 +6,11 @@ const HeaderStyle = styled.header`
   justify-content: space-evenly;
 
   p {
-    color: ${props => props.theme.colors.textSecondary};
+    color: #888888;
   }
 
   p:hover {
-    color: ${props => props.theme.colors.primary};
+    color: #B6116E;
     text-decoration: underline;
   }
 `
